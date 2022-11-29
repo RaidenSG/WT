@@ -1,0 +1,38 @@
+body{
+    background-image: url(https://wallpaperaccess.com/full/302495.jpg);
+}
+.headings{
+    color : #ee1f1f;
+    font-size : 40px;
+    font-weight : bold;
+    width : 700px;
+    align-items: center;
+    text-align : center;
+    text-decoration: underline;
+    margin-left: 20%;
+    line-height: 20px;
+
+}
+span {
+    color : rgb(85, 31, 194);
+    font-size : 20px;
+    font-weight : bold;
+    width : 700px;
+    text-align : center;
+    font-style: italic;
+    line-height: 20px;
+}
+.buttons {
+    font-size: 50;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px rgb(227, 35, 170), 2px 2px 1px red;
+    text-align: left;
+}
+
+.second {
+    background-color: hsla(20, 30%, 50%, 0.6);
+    stroke: hsla(146, 11%, 236%, 0.5);
+
+
+
+}
