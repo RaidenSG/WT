@@ -7,4 +7,9 @@
  * Background (background color, background images, background
  size, background position)<br>
  3.Buttons, Border, Color and Pseudo class.<br>
-Create buttons as per given figure.
+Create buttons as per given figure.<br>
+ 4.Design different pages:<br>
+ * 404 page
+ * CTA page
+ * Hero Section
+ * Navbar
