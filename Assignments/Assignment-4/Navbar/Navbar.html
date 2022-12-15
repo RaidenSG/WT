@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        
+        .Nav{
+            border-bottom: 2px solid #dcdcde;
+        }
+        .Nav div{
+            display: inline-block;
+            
+        }
+        .Nav li{
+            display: inline-block;
+        }
+        #A{
+            position: relative;
+            left: 30px;
+            font-size: 27px;
+            color: #27272a;
+            font-weight: bold;
+        }
+        #A img{
+            width: 61px;
+        }
+        #B li{
+            font-size: 19px;
+            padding-left: 40px;
+            color: #969ba5;
+        }
+        #B li:hover{
+            color:#323845 ;
+        }
+        .Search{
+            float: right;
+            padding: 20px;
+            margin-top: 22px;
+    margin-right: 27px
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="Nav">
+           <div id="A"> <img src="https://scontent.xx.fbcdn.net/v/t1.15752-9/318971458_1211267796494591_654406720323341836_n.png?_nc_cat=110&ccb=1-7&_nc_sid=aee45a&_nc_ohc=sLoOxHaSEB0AX8uhstR&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdT2M7gzCnedrfRnSYi9uAqUUnMIAlL2JWdQqs2ibjHQow&oe=63C28C86" alt="image"> workflow</div>
+            <div id="B">
+           <ul>
+                <li>Dashboard</li>
+                <li>Team</li>
+                <li>Projects</li>
+                <li>Calendar</li>   
+            </ul>
+        </div>
+            <div class="Search">
+                <input type="text" name="search" id="search" placeholder="Search">
+                </div>
+        </nav>
+    </header>
+</body>
+</html>
