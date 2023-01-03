@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .calculator {
+            width: 300px;
+            height: 260px;
+            background-color: rgb(34, 122, 123);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            width: 29%;
+            position: absolute;
+            left: 35%;
+            top: 35%;
+        }
+        
+        .calculator input[type="text"] {
+            width: 98%;
+            height: 40px;
+            font-size: 2em;
+            text-align: right;
+            color: white;
+            background-color: #333;
+        }
+        
+        .calculator button {
+            width: 30%;
+            border: 0;
+            font-size: 1.5em;
+            background-color: rgb(25, 20, 96);
+            color: white;
+            height: 50px;
+           
+            cursor: pointer;
+        }
+        .calculator td:hover{
+            color: black;
+            background-color: white;
+        }
+        
+        td {
+            background-color: rgb(25, 20, 96);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calculator">
+        <table>
+            <tr>
+                <td colspan="4"><input type="text" id="display"></td>
+            </tr>
+            <tr>
+                <td onclick="addNumber('1')"><button>1</button></td>
+                <td onclick="addNumber('2')"><button>2</button></td>
+                <td onclick="addNumber('3')"><button>3</button></td>
+                <td onclick="addNumber('+')"><button>+</button></td>
+
+            </tr>
+            <tr>
+                <td onclick="addNumber('4')"><button>4</button></td>
+                <td onclick="addNumber('5')"><button>5</button></td>
+                <td onclick="addNumber('6')"><button>6</button></td>
+                <td onclick="addNumber('-')"><button>-</button></td>
+
+            </tr>
+            <tr>
+                <td onclick="addNumber('7')"><button>7</button></td>
+                <td onclick="addNumber('8')"><button>8</button></td>
+                <td onclick="addNumber('9')"><button>9</button></td>
+                <td onclick="addNumber('*')"><button>*</button></td>
+
+            </tr>
+            <tr>
+                <td onclick="addNumber('0')"><button>0</button></td>
+                <td onclick="clearDisplay()"><button>C</button></td>
+                <td onclick="addNumber('/')"><button>/</button></td>
+                <td onclick="calculate()"><button>=</button></td>
+
+            </tr>
+
+        </table>
+        <script>
+            function addNumber(num) {
+                var display = document.getElementById("display");
+                display.value += num;
+            }
+
+            function clearDisplay() {
+                var display = document.getElementById("display");
+                display.value = "";
+            }
+
+            function calculate() {
+                var display = document.getElementById("display");
+                display.value = eval(display.value);
+            }
+        </script>
+</body>
+
+</html>

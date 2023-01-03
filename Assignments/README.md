@@ -9,7 +9,8 @@
  3.Buttons, Border, Color and Pseudo class.<br>
 Create buttons as per given figure.<br>
  4.Design different pages:<br>
- * 404 page
- * CTA page
- * Hero Section
- * Navbar
+ * 404 page<br>
+ * CTA page<br>
+ * Hero Section<br>
+ * Navbar<br>
+ 5.Create simple calculator<br>
