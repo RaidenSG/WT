@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form validation</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="s.css">
+        <script src="j.js"></script>
+    </head>
+    <body>
+        <form>
+            <label for="input"><br>Name:</label>
+            <input type="text" id="name" required>
+            <label for="input"><br>Email:</label>
+            <input type="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <label for="input"><br>Phone No.:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10}">
+            <label>Country</label>
+            <select id="country" required>
+                <option value="" label="Select a country ... " selected="selected">Select a country ... </option>
+                <option value="NP" label="Nepal">Nepal</option>
+                <option value="US" label="USA">USA</option>
+                <option value="CA" label="Canada">Canada</option>
+            </select>
+            <label for="input"><br>Password:</label>
+            <input type="password" id="password" required>
+        </form>
+        <button onclick="validate()">Submit</button>
+         
+    </body>
+</html>

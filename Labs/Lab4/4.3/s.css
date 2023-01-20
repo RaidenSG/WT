@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+}
+div{
+    margin: auto;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: 0;
+    right: 0;
+    top: 0;
+}
+div.r{
+    background-color: red;
+    left:0px;
+    
+}
+div.g{
+    background-color: green;
+    
+}
+div.b{
+    background-color: blue;
+    left: 400px;
+}

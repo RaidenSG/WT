@@ -1,0 +1,25 @@
+body{
+    padding: 0;
+    background-color: black;
+}
+div{
+    margin-left: 28.5%;
+    margin-right: 28.5%;
+    max-width: 30%;
+    position: relative sticky;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 30px;
+}
+input{
+    border: 1px solid black;
+    height: 50px;
+    border-radius: 10px;
+}
+button{
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+    background-color: antiquewhite;
+}
