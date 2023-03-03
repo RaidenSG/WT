@@ -26,7 +26,9 @@ a:hover{
     </style>
 </head>
 <body>
-     <h1>Hello ?</h1>
+     <?php
+	 echo "Welcome Users"
+	 ?>
      <a href="logout.php">Logout</a>
 </body>
 </html>

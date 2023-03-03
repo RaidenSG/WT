@@ -1,34 +1,56 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db_name="assignment";
 
-if(isset($_POST['submit'])){
+// Create connection
+$conn = new mysqli($servername,$username,$password,$db_name);
+
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected successfully";
+
+if($_SERVER['REQUEST_METHOD'] == "POST"){
     // echo 'Yes data submited';
 
 
-    $userName = $_POST['name'];
-    $Password = $_POST['password'];
+
+    $user_name = $_POST['email'];
+    $password = $_POST['password'];
 
 
 
-    $sql = "SELECT * FROM content WHERE username = '$userName' and passwords = '$Password'";
-
-
-    $result = mysqli_query($conn, $sql);
-
-    $count = mysqli_num_rows($result);
-    $row = mysqli_fetch_assoc($result);
-
-    if($count ==1){
-        $_SESSION['loginMessage'] = '<span class="success">Welcome' .$username.' </span>';
-        header('location:' .SITEURL. 'home.php');
-        exit();
-
+    if(!empty($user_name)&& !empty($password) && !is_numeric($user_name))
+  {
+    //read from database
+    
+    $query = "select * from content where name = '$user_name' limit 1";
+    
+    $result = mysqli_query($conn,$query);
+    if($result)
+    {
+        if($result)
+        {
+            $user_data = mysqli_fetch_assoc($result);
+            if($user_data['password'] == $password)
+            {
+                $_SESSION['user_id'] = $user_data['user_id'];
+                header("Location: index.php");
+                die;
+            }
+        }
     }
-    else{
-        $_SESSION['noAdmin'] = '<span class="fail">Account' .$username.' is not registered! </span>';
-        header('location:' .SITEURL. 'index.php');
-        exit();
-    }
 
+
+    header("Location: home.php");
+  }else
+  {
+    echo "Please Enter valid information";
+	header ('location:index.php');
+  }
 }
 
 ?>
