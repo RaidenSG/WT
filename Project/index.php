@@ -155,7 +155,9 @@
                          <form action="signin.php" method="post">
                          
             <div class="input">
-                
+                <?php
+            
+      ?>
                                 <div id="A"><input type="email" placeholder="Username or Email Address" name="email">
                                         </div>
                                 <div id="B"><input type="password" placeholder="Password" name="password">

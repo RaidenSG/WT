@@ -151,7 +151,7 @@
             <li>Contact</li>
             <li>More</li>
         </ul>
-       <span id="btnn"><a href="login.php">Log In</a></span>
+       <span id="btnn"><a href="index.php">Log In</a></span>
     </nav>
     <div class="block">
             <div class="img">

@@ -1,50 +1,34 @@
-<?php 
-session_start(); 
-$conn = mysqli_connect('localhost', 'root', '','assignment');
+<?php
 
-if (isset($_POST['name']) && isset($_POST['password'])) {
+if(isset($_POST['submit'])){
+    // echo 'Yes data submited';
 
-	function validate($data){
-       $data = trim($data);
-	   $data = stripslashes($data);
-	   $data = htmlspecialchars($data);
-	   return $data;
-	}
 
-	$name = validate($_POST['uname']);
-	$pass = validate($_POST['password']);
+    $userName = $_POST['name'];
+    $Password = $_POST['password'];
 
-	if (empty($uname)) {
-		header("Location: login.php?error=User Name is required");
-	    exit();
-	}else if(empty($pass)){
-        header("Location: login.php?error=Password is required");
-	    exit();
-	}else{
-		$sql = "SELECT * FROM users WHERE user_name='$name' AND password='$pass'";
 
-		$result = mysqli_query($conn, $sql);
 
-		if (mysqli_num_rows($result) === 1) {
-			$row = mysqli_fetch_assoc($result);
-            if ($row['user_name'] === $uname && $row['password'] === $pass) {
-            	$_SESSION['user_name'] = $row['user_name'];
-            	$_SESSION['name'] = $row['name'];
-            	$_SESSION['id'] = $row['id'];
-            	header("Location: home.php");
-		        exit();
-            }else{
-				header("Location: login.php?error=Incorect User name or password");
-		        exit();
-			}
-		}else{
-			header("Location: login.php?error=Incorect User name or password");
-	        exit();
-		}
-	}
-	
-}else{
-	header("Location: login.php");
-	exit();
+    $sql = "SELECT * FROM content WHERE username = '$userName' and passwords = '$Password'";
+
+
+    $result = mysqli_query($conn, $sql);
+
+    $count = mysqli_num_rows($result);
+    $row = mysqli_fetch_assoc($result);
+
+    if($count ==1){
+        $_SESSION['loginMessage'] = '<span class="success">Welcome' .$username.' </span>';
+        header('location:' .SITEURL. 'home.php');
+        exit();
+
+    }
+    else{
+        $_SESSION['noAdmin'] = '<span class="fail">Account' .$username.' is not registered! </span>';
+        header('location:' .SITEURL. 'index.php');
+        exit();
+    }
+
 }
+
 ?>
