@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn{
+            border: 3px solid grey;
+            padding:15px 15px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is heading</h1>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fugiat necessitatibus quibusdam temporibus aliquam eius ipsa libero sit. Blanditiis enim adipisci, totam iusto amet temporibus earum cupiditate praesentium, quasi esse quo ullam ratione voluptate odit ad. Cum eaque nesciunt consequatur! Atque molestias impedit cupiditate quas ipsa vel accusamus expedita cum inventore esse voluptatibus exercitationem obcaecati numquam voluptatum facere maxime hic distinctio eum ullam, rem maiores! Perspiciatis provident tempore totam. Impedit eius eos quisquam, explicabo iure reprehenderit voluptas molestias molestiae dicta illum mollitia fugit, fuga dolor ratione commodi voluptate deleniti error debitis similique. Rem officiis repellendus mollitia deserunt quam molestias voluptatibus et totam ut iure, id quis quod laudantium, possimus nam, voluptates optio sed ab veniam vero. Corporis cum, placeat vitae provident accusantium itaque alias nisi distinctio quaerat doloribus possimus tempora ipsa fugiat doloremque corrupti neque voluptatibus repudiandae accusamus modi nihil, harum quidem sapiente! Fugit quos ea repudiandae eveniet, enim consequuntur incidunt saepe ipsa, ipsum perferendis facilis accusantium iure! Deserunt earum magni fuga unde laborum fugiat est quia nobis maiores dolores recusandae vero, optio porro omnis voluptatibus illo veniam laboriosam ad alias non? Eos magnam facilis deleniti tempore quo quam est, mollitia minima recusandae distinctio fuga sit laudantium, reprehenderit quidem provident.
+    </p>
+    <button class="btn" onclick="toggleHide()">Show Less</button>
+
+    <script>
+        function toggleHide(){
+            let btn= document.getElementById('btn');
+            let para= document.getElementById('para');
+           
+            
+            if(para.style.display!='none'){
+                para.style.display='none';
+            }else{
+                para.style.display='block';
+            }
+        }
+        let para=document.getElementById('para');
+        para.addEventListener('mousedown', function execute(){
+            console.log('Mousedown');
+        })
+        
+    </script>
+</body>
+</html>

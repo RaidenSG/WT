@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="first.php" method="post">
+        Username: <input type="text" id="name"><br>
+        Password: <input type="text" id="password"><br>
+        <input type="submit" value="Login" onclick="check()">
+    </form>
+    
+        
+    <script>
+        function check(){
+            var user = document.getElementById('name').value;
+            var pass = document.getElementById('password').value;
+            if(user=="" || pass ==""){
+                    alert('Please enter:')
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
